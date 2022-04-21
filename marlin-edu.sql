@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 21 2022 г., 15:31
+-- Время создания: Апр 21 2022 г., 18:24
 -- Версия сервера: 5.5.62
 -- Версия PHP: 7.3.2
 
@@ -52,6 +52,29 @@ INSERT INTO `people` (`id`, `img`, `alt`, `name`, `job`, `twitter_link`, `twitte
 (4, 'img/demo/authors/jovanni.png', 'Jovanni Lo', 'Jovanni L. (PHP Developer)', 'Partner &amp; Contributor', 'https://twitter.com/@lodev09', '@lodev09', 'https://wrapbootstrap.com/user/lodev09', 'Contact Jovanni', '<i class=\"fal fa-envelope\"></i>', 'banned'),
 (5, 'img/demo/authors/roberto.png', 'Jovanni Lo', 'Roberto R. (Rails Developer)', 'Partner &amp; Contributor', 'https://twitter.com/@sildur', '@sildur', 'https://wrapbootstrap.com/user/sildur', 'Contact Roberto', '<i class=\"fal fa-envelope\"></i>', 'banned');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tasks`
+--
+
+CREATE TABLE `tasks` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `user_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `tasks`
+--
+
+INSERT INTO `tasks` (`id`, `first_name`, `last_name`, `user_name`) VALUES
+(1, 'Mark', 'Otto', '@mdo'),
+(2, 'Jacob', 'Thornton', '@fat'),
+(3, 'Larry', 'the Bird', '@twitter'),
+(4, 'Larry the Bird', 'Bird', '@twitter');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -63,6 +86,12 @@ ALTER TABLE `people`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `tasks`
+--
+ALTER TABLE `tasks`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -71,6 +100,12 @@ ALTER TABLE `people`
 --
 ALTER TABLE `people`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `tasks`
+--
+ALTER TABLE `tasks`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
