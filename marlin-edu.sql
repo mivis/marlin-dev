@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 21 2022 г., 18:24
+-- Время создания: Апр 21 2022 г., 18:47
 -- Версия сервера: 5.5.62
 -- Версия PHP: 7.3.2
 
@@ -75,6 +75,25 @@ INSERT INTO `tasks` (`id`, `first_name`, `last_name`, `user_name`) VALUES
 (3, 'Larry', 'the Bird', '@twitter'),
 (4, 'Larry the Bird', 'Bird', '@twitter');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `task_9`
+--
+
+CREATE TABLE `task_9` (
+  `id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `task_9`
+--
+
+INSERT INTO `task_9` (`id`, `text`) VALUES
+(1, 'fitrst text'),
+(2, 'second text');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -92,6 +111,12 @@ ALTER TABLE `tasks`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `task_9`
+--
+ALTER TABLE `task_9`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -106,6 +131,12 @@ ALTER TABLE `people`
 --
 ALTER TABLE `tasks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `task_9`
+--
+ALTER TABLE `task_9`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
