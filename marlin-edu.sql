@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 21 2022 г., 18:47
+-- Время создания: Апр 21 2022 г., 19:12
 -- Версия сервера: 5.5.62
 -- Версия PHP: 7.3.2
 
@@ -92,7 +92,8 @@ CREATE TABLE `task_9` (
 
 INSERT INTO `task_9` (`id`, `text`) VALUES
 (1, 'fitrst text'),
-(2, 'second text');
+(2, 'second text'),
+(3, 'test');
 
 --
 -- Индексы сохранённых таблиц
@@ -136,7 +137,7 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT для таблицы `task_9`
 --
 ALTER TABLE `task_9`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
