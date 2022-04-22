@@ -15,6 +15,6 @@ if ($_POST) {
     $statement->execute(['image' => $image]);
 
     unlink("upload/img/".$image);
-    header("Location: task_15.php");
+    header("Location: task_15_1.php");
 }
 ?>
